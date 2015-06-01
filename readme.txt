@@ -51,7 +51,9 @@ Answer to foo bar dilemma.
 
 == Screenshots ==
 
-
+`/assets/woocommerce-order-address-print-1.png`
+`/assets/woocommerce-order-address-print-2.png`
+`/assets/woocommerce-order-address-print-preview.png`
 == Changelog ==
 
 == Upgrade Notice ==
