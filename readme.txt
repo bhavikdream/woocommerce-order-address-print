@@ -50,9 +50,9 @@ An answer to that question.
 Answer to foo bar dilemma.
 
 == Screenshots ==
-1.This screen shot description corresponds to screenshot-1.png
-1.This screen shot description corresponds to screenshot-2.png
-1.This screen shot description corresponds to screenshot-3.png
+1.`This screen shot description corresponds to screenshot-1.png`
+1.`This screen shot description corresponds to screenshot-2.png`
+1.`This screen shot description corresponds to screenshot-3.png`
 
 == Changelog ==
 
