@@ -50,7 +50,9 @@ An answer to that question.
 Answer to foo bar dilemma.
 
 == Screenshots ==
-
+1.
+2.
+3.
 
 == Changelog ==
 
