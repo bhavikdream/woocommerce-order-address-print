@@ -54,6 +54,12 @@ Answer to foo bar dilemma.
 1. Woocommerce Order address Print Setting Page .
 2. Woocommerce Order address Print bulk Action.
 3. Woocommerce Order address Print Preview.
+4. Woocommerce Order address Print bulk Action and setting page link.
+5. Woocommerce Order address Print Order List.
+6. Woocommerce Order address Print Setting page option.
+7. Woocommerce Order address Print Single Order print Setting 
+
+
 
 == Changelog ==
 
