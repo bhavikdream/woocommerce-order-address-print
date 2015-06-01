@@ -1,0 +1,71 @@
+=== Woocommerce Order address Print ===
+Contributors: bhavikdream
+Donate link: 
+Tags: Address Print, Adress Print With Qr code, export Order Doc, print label, print Order addresh List, print Order Address, Print Order List, Shipping Print, woocommerce, Woocommerce Add-ons
+
+Requires at least: 3.5
+Tested up to: 4.2.2
+Stable tag: 1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+
+WooCommerce Order Address Sticker Print
+
+
+== Description ==
+
+WooCommerce Order Address Print is an extension that allows you to **print out shipping / address labels** from your **WooCommerce orders with QR code.** Simply go to your woocommerce order list and choose Address print to get address printed. 
+
+Check the Images tab for screenshots of the settings page & bulk actions.
+
+**Main features:**
+
+1   Print multiple address labels on a single sheet in** bulk, or individually ** on label printers.
+1   Define your page size, either A4, Letter or your custom size.
+1   Print preview to get idea how the printing will go.
+1   Set the number of rows/colums on the label sheets.
+1   Modify label content (address formatting, order number, phone number, returns address, etc) as well as formatting (size, font size).
+1   Additional customization of the labels possible with simple HTML & CSS.
+1   ** QR code **get printed with address.
+1   Download the printing address as word doc file.
+
+
+
+== Installation ==
+
+1 Upload Plugin in Plugins Directry 
+1 After activating Woocommerce-order-address-print
+1 setting Your Print 
+1 enjoy
+
+== Frequently Asked Questions ==
+
+= A question that someone might have =
+
+An answer to that question.
+
+= What about foo bar? =
+
+Answer to foo bar dilemma.
+
+== Screenshots ==
+
+
+== Changelog ==
+
+== Upgrade Notice ==
+
+== Arbitrary section ==
+
+
+== A brief Markdown Example ==
+
+
+
+
+
+
+
+
+
