@@ -15,7 +15,7 @@ WooCommerce Order Address Sticker Print
 
 == Description ==
 
-WooCommerce Order Address Print is an extension that allows you to **print out shipping / address labels**from your**WooCommerce orders with QR code.** Simply go to your woocommerce order list and choose Address print to get address printed. 
+WooCommerce Order Address Print is an extension that allows you to **print out shipping / address labels** from your **WooCommerce orders with QR code.**  Simply go to your woocommerce order list and choose Address print to get address printed. 
 
 Check the Images tab for screenshots of the settings page & bulk actions.
 
