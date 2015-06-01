@@ -1,7 +1,7 @@
 === Woocommerce Order address Print ===
 Contributors: bhavikdream
 Donate link: 
-Tags: Address Print, Adress Print With Qr code, export Order Doc, print label, print Order addresh List, print Order Address, Print Order List, Shipping Print, woocommerce, Woocommerce Add-ons
+Tags: Address Print, Adress Print With Qr code, export Order Doc, print label, print Order addresh List, print Order Address, Print Order List, Shipping Print, woocommerce, Woocommerce Add-ons,woocommerce print order list,WooCommerce Print Order List ,printing invoices ,WooCommerce Print Invoice,WooCommerce - Print Processing orders, print packing lists, Packing list plugin,print from the order list
 
 Requires at least: 3.5
 Tested up to: 4.2.2
