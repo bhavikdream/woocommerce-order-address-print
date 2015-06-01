@@ -19,7 +19,7 @@ WooCommerce Order Address Print is an extension that allows you to **print out s
 
 Check the Images tab for screenshots of the settings page & bulk actions.
 
-**Main features:**
+** Main features: **
 
 1   Print multiple address labels on a single sheet in** bulk, or individually ** on label printers.
 1   Define your page size, either A4, Letter or your custom size.
