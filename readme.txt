@@ -27,7 +27,7 @@ Check the Images tab for screenshots of the settings page & bulk actions.
 1.   Set the number of rows/colums on the label sheets.
 1.   Modify label content (address formatting, order number, phone number, returns address, etc) as well as formatting (size, font size).
 1.   Additional customization of the labels possible with simple HTML & CSS.
-1.   **QR code **get printed with address.**
+1.   **QR code get printed with address.**
 1.   Download the printing address as word doc file.
 
 
