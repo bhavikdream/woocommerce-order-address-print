@@ -51,9 +51,9 @@ Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. The slick WooCommerce settings panel.
-2. WooCommerce products admin.
-3. Product data panel.
+1. Woocommerce Order address Print Setting Page .
+2. Woocommerce Order address Print bulk Action.
+3. Woocommerce Order address Print Preview.
 
 == Changelog ==
 
