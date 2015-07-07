@@ -20,7 +20,7 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 			?>
 				<div class="wrap">
 					<div class="icon32" id="icon-options-general"><br /></div>
-					<h2><?php _e( 'WooCommerce Order address Print', 'shpl_labels' ); ?></h2>
+					<h2><?php _e( 'WooCommerce Order address Print', 'woap' ); ?></h2>
 					
 					<div class="wclabels-settings">
 						<form method="post" action="options.php">
@@ -35,7 +35,7 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 						</form>
 					</div>
 					<div class="wclabels-preview">
-						<h3><?php _e( 'Page layout preview', 'shpl_labels' ); ?></h3>
+						<h3><?php _e( 'Page layout preview', 'woap' ); ?></h3>
 						<table>
 							<tr>
 								<td>&nbsp;</td>
@@ -61,14 +61,14 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 			// Section.
 			add_settings_section(
 				'template_settings',
-				__( 'Template settings', 'shpl_labels' ),
+				__( 'Template settings', 'woap' ),
 				array( &$this, 'section_options_callback' ),
 				$option
 			);
 
 			add_settings_field(
 				'paper_size',
-				__( 'Paper format', 'shpl_labels' ),
+				__( 'Paper format', 'woap' ),
 				array( &$this, 'select_element_callback' ),
 				$option,
 				'template_settings',
@@ -76,9 +76,9 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'paper_size',
 					'options' 		=> array(
-						'a4'		=> __( 'A4' , 'shpl_labels' ),
-						'letter'	=> __( 'Letter' , 'shpl_labels' ),
-						'custom'	=> __( 'Custom size (enter below)' , 'shpl_labels' ),
+						'a4'		=> __( 'A4' , 'woap' ),
+						'letter'	=> __( 'Letter' , 'woap' ),
+						'custom'	=> __( 'Custom size (enter below)' , 'woap' ),
 					),
 					'custom'		=> array(
 						'type'		=> 'multiple_text_element_callback',
@@ -87,12 +87,12 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 							'id'			=> 'custom_paper_size',
 							'fields'		=> array(
 								'width'		=> array(
-									'label'			=> __( 'Width (mm):' , 'shpl_labels' ),
+									'label'			=> __( 'Width (mm):' , 'woap' ),
 									'label_width'	=> '100px',
 									'size'			=> '5',
 								),
 								'height'	=> array(
-									'label'			=> __( 'Height (mm):' , 'shpl_labels' ),
+									'label'			=> __( 'Height (mm):' , 'woap' ),
 									'label_width'	=> '100px',
 									'size'			=> '5',
 								),
@@ -104,7 +104,7 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 
 			add_settings_field(
 				'paper_orientation',
-				__( 'Paper orientation', 'shpl_labels' ),
+				__( 'Paper orientation', 'woap' ),
 				array( &$this, 'select_element_callback' ),
 				$option,
 				'template_settings',
@@ -112,15 +112,15 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'paper_orientation',
 					'options' 		=> array(
-						'portrait'	=> __( 'Portrait' , 'shpl_labels' ),
-						'landscape'	=> __( 'Landscape' , 'shpl_labels' ),
+						'portrait'	=> __( 'Portrait' , 'woap' ),
+						'landscape'	=> __( 'Landscape' , 'woap' ),
 					),
 				)
 			);
 
 			add_settings_field(
 				'cols',
-				__( 'Columns', 'shpl_labels' ),
+				__( 'Columns', 'woap' ),
 				array( &$this, 'text_element_callback' ),
 				$option,
 				'template_settings',
@@ -128,13 +128,13 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'cols',
 					'size'			=> '5',
-					// 'description'	=> __( 'Number of columns on the label sheet', 'shpl_labels' ),
+					// 'description'	=> __( 'Number of columns on the label sheet', 'woap' ),
 				)
 			);
 
 			add_settings_field(
 				'rows',
-				__( 'Rows', 'shpl_labels' ),
+				__( 'Rows', 'woap' ),
 				array( &$this, 'text_element_callback' ),
 				$option,
 				'template_settings',
@@ -142,40 +142,40 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'rows',
 					'size'			=> '5',
-					// 'description'	=> __( 'Number of rows on the label sheet', 'shpl_labels' ),
+					// 'description'	=> __( 'Number of rows on the label sheet', 'woap' ),
 				)
 			);
 
 			/*add_settings_field(
 				'offset',
-				__( 'Ask for offset', 'shpl_labels' ),
+				__( 'Ask for offset', 'woap' ),
 				array( &$this, 'checkbox_element_callback' ),
 				$option,
 				'template_settings',
 				array(
 					'menu'			=> $option,
 					'id'			=> 'offset',
-					'description'	=>  __( 'This option enables you to start printing on for example the 3rd label', 'shpl_labels' ),
+					'description'	=>  __( 'This option enables you to start printing on for example the 3rd label', 'woap' ),
 				)
 			); */
 			
 			add_settings_field(
 				'show_qr',
-				__( 'Show Qr Code', 'shpl_labels' ),
+				__( 'Show Qr Code', 'woap' ),
 				array( &$this, 'checkbox_element_callback' ),
 				$option,
 				'template_settings',
 				array(
 					'menu'			=> $option,
 					'id'			=> 'show_qr',
-					'description'	=>  __( 'This option enables QR Code Show On Print', 'shpl_labels' ),
+					'description'	=>  __( 'This option enables QR Code Show On Print', 'woap' ),
 				)
 			);
 			
 			
 			add_settings_field(
 				'ecc',
-				__( 'ECC', 'shpl_labels' ),
+				__( 'ECC', 'woap' ),
 				array( &$this, 'select_element_callback' ),
 				$option,
 				'template_settings',
@@ -183,17 +183,17 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'ecc',
 					'options' 		=> array(
-						'l'	=> __( 'L - smallest' , 'shpl_labels' ),
-						'M'	=> __( 'M' , 'shpl_labels' ),
-						'Q'	=> __( 'Q' , 'shpl_labels' ),
-						'H'	=> __( 'H - best' , 'shpl_labels' ),
+						'l'	=> __( 'L - smallest' , 'woap' ),
+						'M'	=> __( 'M' , 'woap' ),
+						'Q'	=> __( 'Q' , 'woap' ),
+						'H'	=> __( 'H - best' , 'woap' ),
 					),
 				)
 			);
 			
 			add_settings_field(
 				'code_size',
-				__( 'Code Size', 'shpl_labels' ),
+				__( 'Code Size', 'woap' ),
 				array( &$this, 'select_element_callback' ),
 				$option,
 				'template_settings',
@@ -201,16 +201,16 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'menu'			=> $option,
 					'id'			=> 'code_size',
 					'options' 		=> array(
-						'1'	=> __( '1' , 'shpl_labels' ),
-						'2'	=> __( '2' , 'shpl_labels' ),
-						'3'	=> __( '3' , 'shpl_labels' ),
-						'4'	=> __( '4' , 'shpl_labels' ),
-						'5'	=> __( '5' , 'shpl_labels' ),
-						'6'	=> __( '6' , 'shpl_labels' ),
-						'7'	=> __( '7' , 'shpl_labels' ),
-						'8'	=> __( '8' , 'shpl_labels' ),
-						'9'	=> __( '9' , 'shpl_labels' ),
-						'10'	=> __( '10' , 'shpl_labels' ),						
+						'1'	=> __( '1' , 'woap' ),
+						'2'	=> __( '2' , 'woap' ),
+						'3'	=> __( '3' , 'woap' ),
+						'4'	=> __( '4' , 'woap' ),
+						'5'	=> __( '5' , 'woap' ),
+						'6'	=> __( '6' , 'woap' ),
+						'7'	=> __( '7' , 'woap' ),
+						'8'	=> __( '8' , 'woap' ),
+						'9'	=> __( '9' , 'woap' ),
+						'10'	=> __( '10' , 'woap' ),						
 						
 						
 					),
@@ -221,28 +221,28 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 
 			add_settings_field(
 				'preview',
-				__( 'Enable preview', 'shpl_labels' ),
+				__( 'Enable preview', 'woap' ),
 				array( &$this, 'checkbox_element_callback' ),
 				$option,
 				'template_settings',
 				array(
 					'menu'			=> $option,
 					'id'			=> 'preview',
-					'description'	=> __( 'Open the address labels in a new browser tab instead of printing directly', 'shpl_labels' ),
+					'description'	=> __( 'Open the address labels in a new browser tab instead of printing directly', 'woap' ),
 				)
 			);
 
 			// Section.
 			add_settings_section(
 				'label_contents',
-				__( 'Label contents', 'shpl_labels' ),
+				__( 'Label contents', 'woap' ),
 				array( &$this, 'section_options_callback' ),
 				$option
 			);
 
 			add_settings_field(
 				'address_data',
-				__( 'Address/order data', 'shpl_labels' ),
+				__( 'Address/order data', 'woap' ),
 				array( &$this, 'textarea_element_callback' ),
 				$option,
 				'label_contents',
@@ -252,26 +252,26 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'width'			=> '42',
 					'height'		=> '8',
 					'default'		=> '[shipping_address]',
-					'description'	=> __( 'You can use the following placeholders: [shipping_address], [shipping_first_name], [shipping_last_name], [shipping_company], [shipping_address_1], [shipping_address_2], [shipping_city], [shipping_postcode], [shipping_country], [shipping_state], [billing_email], [billing_phone] & [order_number]', 'shpl_labels' ),
+					'description'	=> __( 'You can use the following placeholders: [shipping_address], [shipping_first_name], [shipping_last_name], [shipping_company], [shipping_address_1], [shipping_address_2], [shipping_city], [shipping_postcode], [shipping_country], [shipping_state], [billing_email], [billing_phone] & [order_number]', 'woap' ),
 				)
 			);
 
 			add_settings_field(
 				'remove_whitespace',
-				__( 'Remove empty lines', 'shpl_labels' ),
+				__( 'Remove empty lines', 'woap' ),
 				array( &$this, 'checkbox_element_callback' ),
 				$option,
 				'label_contents',
 				array(
 					'menu'			=> $option,
 					'id'			=> 'remove_whitespace',
-					'description'	=> __( 'Enable this option if you want to remove empty lines left over from empty address/placeholder replacements', 'shpl_labels' ),
+					'description'	=> __( 'Enable this option if you want to remove empty lines left over from empty address/placeholder replacements', 'woap' ),
 				)
 			);
 
 			add_settings_field(
 				'font_size',
-				__( 'Font size', 'shpl_labels' ),
+				__( 'Font size', 'woap' ),
 				array( &$this, 'select_element_callback' ),
 				$option,
 				'label_contents',
@@ -296,7 +296,7 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 
 			add_settings_field(
 				'block_width',
-				__( 'Address block width', 'shpl_labels' ),
+				__( 'Address block width', 'woap' ),
 				array( &$this, 'text_element_callback' ),
 				$option,
 				'label_contents',
@@ -305,27 +305,27 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'id'			=> 'block_width',
 					'size'			=> '5',
 					'default'		=> '5cm',
-					'description'	=> __( 'Enter any value in cm, mm, px or in - use a dot (and not a comma!) as the decimal separator!', 'shpl_labels' ),
+					'description'	=> __( 'Enter any value in cm, mm, px or in - use a dot (and not a comma!) as the decimal separator!', 'woap' ),
 				)
 			);
 
 			add_settings_field(
 				'export_doc',
-				__( 'Export Doc', 'shpl_labels' ),
+				__( 'Export Doc', 'woap' ),
 				array( &$this, 'checkbox_element_callback' ),
 				$option,
 				'template_settings',
 				array(
 					'menu'			=> $option,
 					'id'			=> 'export_doc',
-					'description'	=>  __( 'This option Doc File Export', 'shpl_labels' ),
+					'description'	=>  __( 'This option Doc File Export', 'woap' ),
 				)
 			);
 			
 			
 			add_settings_field(
 				'custom_styles',
-				__( 'Custom styles', 'shpl_labels' ),
+				__( 'Custom styles', 'woap' ),
 				array( &$this, 'textarea_element_callback' ),
 				$option,
 				'label_contents',
@@ -334,7 +334,7 @@ if ( !class_exists( 'WooCommerce_shipping_Address_Labels_Settings' ) ) {
 					'id'			=> 'custom_styles',
 					'width'			=> '42',
 					'height'		=> '8',
-					'description'	=> __( 'Enter custom CSS styles for the address labels here', 'shpl_labels' ),
+					'description'	=> __( 'Enter custom CSS styles for the address labels here', 'woap' ),
 				)
 			);
 

@@ -5,9 +5,9 @@
  * Description: WooCommerce Order Address Print is an extension that allows you to print out shipping / address labels from your WooCommerce orders with QR code. Simply go to your woocommerce order list and choose Address print to get address printed. 
  * Author: Bhavik Patel
  * Author URI:   http://www.uniquesweb.co.in/demo/woocommerce
- * Version: 1.0.0
- * Text Domain: shpl_labels
- * Domain Path: 
+ * Version: 1.2.0
+ * Text Domain: woap
+ * Domain Path: /languages/
  *
  * Copyright:
  *
@@ -42,13 +42,13 @@ if ( ! class_exists( 'shipping_print' ) )
 		public function __construct()
 		{
 			
-			self::$plugin_version = '1.0.0';
+			self::$plugin_version = '1.2.0';
 			self::$plugin_prefix = 'shpt_';
 			self::$plugin_basefile_path = __FILE__;
 			self::$plugin_basefile = plugin_basename( self::$plugin_basefile_path );
 			self::$plugin_url = plugin_dir_url( self::$plugin_basefile );
 			self::$plugin_path = trailingslashit( dirname( self::$plugin_basefile_path ) );	
-			
+			add_action( 'init', array($this,'woap_load_textdomain') );
 			add_action( 'admin_footer', array( $this, 'bulk_admin_footer' ), 10 );
 			add_action( 'load-edit.php', array( $this, 'bulk_action' ) );
 			add_action( 'wp_ajax_bulk_shipping_print', array( $this, 'bulk_shipping_print' ));
@@ -61,6 +61,17 @@ if ( ! class_exists( 'shipping_print' ) )
 			add_action( 'add_meta_boxes_shop_order', array( $this, 'add_box' ) );
 			$this->settings = get_option( 'shp_labels_template_settings' );
 			
+		
+		}
+		
+		function woap_load_textdomain()
+		{
+				$domain = 'woap';
+				$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+				load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
+				load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+
+
 		}
 		
 		public function include_classes() {
@@ -78,8 +89,8 @@ if ( ! class_exists( 'shipping_print' ) )
 			?>
 			<script type="text/javascript">
 			jQuery(function() {
-				jQuery('<option>').val('bulk_shipping_print').text('<?php _e( 'Adderss Print', 'woocommerce' )?>').appendTo("select[name='action']");
-				jQuery('<option>').val('bulk_shipping_print').text('<?php _e( 'Adderss Print', 'woocommerce' )?>').appendTo("select[name='action2']");
+				jQuery('<option>').val('bulk_shipping_print').text('<?php _e( 'Adderss Print', 'woap' )?>').appendTo("select[name='action']");
+				jQuery('<option>').val('bulk_shipping_print').text('<?php _e( 'Adderss Print', 'woap' )?>').appendTo("select[name='action2']");
 
 				
 			});
@@ -145,7 +156,7 @@ if ( ! class_exists( 'shipping_print' ) )
 			{
 				?>
 				<div id="woocommerce-shipping-addresh-print" class="updated">
-						<p>Orders Address <a href="<?php echo urldecode( $_REQUEST['print_url'] ); ?>" target="_blank" class="print-preview-button" id="woocommerce-delivery-notes-bulk-print-button"><?php _e( 'Print now', 'woocommerce-delivery-notes' ) ?></a> <span class="print-preview-loading spinner"></span></p>
+						<p><?php _e('Orders Address','woap')?> <a href="<?php echo urldecode( $_REQUEST['print_url'] ); ?>" target="_blank" class="print-preview-button" id="woocommerce-delivery-notes-bulk-print-button"><?php _e( 'Print now', 'woap' ) ?></a> <span class="print-preview-loading spinner"></span></p>
 				</div>
 				<?php
 			}		
@@ -343,7 +354,7 @@ if ( ! class_exists( 'shipping_print' ) )
 			
 	
 
-			wp_register_style('shplabels-admin-styles', self::$plugin_url .'/css/shpllabels-admin-styles.css',array(),'1.0.0','all');
+			wp_register_style('shplabels-admin-styles', self::$plugin_url .'/css/shpllabels-admin-styles.css',array(),'1.2.0','all');
 			wp_enqueue_style( 'shplabels-admin-styles' );
 				if($this->settings['show_qr'])
 			{
@@ -368,7 +379,7 @@ if ( ! class_exists( 'shipping_print' ) )
 													);
 			
 
-			wp_register_script('shlabels-admin-scripts', self::$plugin_url.'js/shlabels-admin-scripts.js',array( 'jquery' ),'1.0.0');
+			wp_register_script('shlabels-admin-scripts', self::$plugin_url.'js/shlabels-admin-scripts.js',array( 'jquery' ),'1.2.0');
 			wp_enqueue_script( 'shlabels-admin-scripts' );
 			wp_localize_script( 'shlabels-admin-scripts', 'sh_pl', $translation_array );
 
@@ -382,8 +393,8 @@ if ( ! class_exists( 'shipping_print' ) )
 
 			$this->options_page_hook = add_submenu_page(
 				'woocommerce',
-				__( 'Order Address Labels', 'shpl_labels' ),
-				__( 'Order Address Labels', 'shpl_labels' ),
+				__( 'Order Address Labels', 'woap' ),
+				__( 'Order Address Labels', 'woap' ),
 				'manage_woocommerce',
 				'sh_labels_options_page',
 				array( 'WooCommerce_shipping_Address_Labels_Settings', 'settings_page' )
@@ -391,7 +402,7 @@ if ( ! class_exists( 'shipping_print' ) )
 		}
 	
 		public function add_box() {
-			add_meta_box( 'shp_labels-box', __( 'Print Shipping  Address Labels', 'shpl_labels' ), array( $this, 'create_box_content' ), 'shop_order', 'side', 'default' );
+			add_meta_box( 'shp_labels-box', __( 'Print Shipping  Address Labels', 'woap' ), array( $this, 'create_box_content' ), 'shop_order', 'side', 'default' );
 		}
 		
 		/**
@@ -406,8 +417,8 @@ if ( ! class_exists( 'shipping_print' ) )
 			$args = wp_parse_args( array( 'post'=>$post_id,'action'=>edit,'shippint_add_print' => true, 'total' => $total, 'print_url' => urlencode( $sendback ) ), $args );
 			$sendback = add_query_arg( $args, '' );
 			
-			$alt = esc_attr__( 'Print Shipping  Address Labels', 'wpo_wclabels' );
-			$title = __( 'Print Shipping  Address Labels', 'wpo_wclabels' );
+			$alt = esc_attr__( 'Print Shipping  Address Labels', 'woap' );
+			$title = __( 'Print Shipping  Address Labels', 'woap' );
 			?>
 			<ul class="wpo_wclabels-actions">
 				<li><a href="<?php echo $sendback; ?>" class="button wclabels-single"  alt="<?php echo $alt; ?>" data-id="<?php echo $post_id; ?>"><?php echo $title; ?></a></li>
