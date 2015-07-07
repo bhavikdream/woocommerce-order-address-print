@@ -64,11 +64,8 @@ Answer to foo bar dilemma.
 
 == Changelog ==
 
-
-**1.2.0 - 07/07/2015**
-
-Added  i18n and l10n support 
-
+= 1.2.0 - 07/07/2015 =
+* Added  i18n and l10n support 
 1.  id_ID : Indonesian 
 1.  de_DE : German 
 1.  it_IT : Italian
@@ -83,6 +80,8 @@ Added  i18n and l10n support
 
 
 == Upgrade Notice ==
+
+Automatic updates should work like a charm; as always though, ensure you backup your site just in case.
 
 == Arbitrary section ==
 
