@@ -63,7 +63,6 @@ Answer to foo bar dilemma.
 
 
 == Changelog ==
-
 = 1.2.0 - 07/07/2015 =
 * Added  i18n and l10n support 
 1.  id_ID : Indonesian 
