@@ -5,7 +5,7 @@
  * Description: WooCommerce Order Address Print is an extension that allows you to print out shipping / address labels from your WooCommerce orders with QR code. Simply go to your woocommerce order list and choose Address print to get address printed. 
  * Author: Bhavik Patel
  * Author URI:   http://www.uniquesweb.co.in/demo/woocommerce
- * Version: 1.2.0
+ * Version: 1.2.1
  * Text Domain: woap
  * Domain Path: /languages/
  *
@@ -42,7 +42,7 @@ if ( ! class_exists( 'shipping_print' ) )
 		public function __construct()
 		{
 			
-			self::$plugin_version = '1.2.0';
+			self::$plugin_version = '1.2.1';
 			self::$plugin_prefix = 'shpt_';
 			self::$plugin_basefile_path = __FILE__;
 			self::$plugin_basefile = plugin_basename( self::$plugin_basefile_path );
@@ -354,7 +354,7 @@ if ( ! class_exists( 'shipping_print' ) )
 			
 	
 
-			wp_register_style('shplabels-admin-styles', self::$plugin_url .'/css/shpllabels-admin-styles.css',array(),'1.2.0','all');
+			wp_register_style('shplabels-admin-styles', self::$plugin_url .'/css/shpllabels-admin-styles.css',array(),'1.2.1','all');
 			wp_enqueue_style( 'shplabels-admin-styles' );
 				if($this->settings['show_qr'])
 			{
